@@ -1,0 +1,207 @@
+﻿<!DOCTYPE HTML>
+<html  manifest="appcache.manifest">
+    <head>
+
+        <title>com.Mohawkind.mobilepricing</title>
+  <!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="Content/css/skeleton_mod.css">
+    <link rel="stylesheet" href="Content/css/styles.css">
+        <!-- Mobile Specific Metasf
+  ================================================== -->
+
+         <!-- Favicon
+	================================================== -->
+	<link rel="shortcut icon" href="Content/images/icons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="Content/images/icons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Content/images/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Content/images/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" href="Content/images/icons/apple-touch-icon-114x114.png"/>
+
+    <link rel="apple-touch-startup-image" href="assets/images/icons/startup.png" />
+    <link rel="image_src" href="assets/images/icons/display-thumb.jpg" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" >
+
+          <!-- Javacript
+	================================================== -->
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>-->
+   <!-- <script type="text/javascript" charset="utf-8" src="inappbrowser"></script>-->
+    <script type="text/javascript" charset="utf-8" src="startup.js"></script>
+    <script type="text/javascript">
+
+        var oldState = "";
+        try{
+            if (window.navigator == undefined) {
+                alert("no navigator");
+                
+            }
+            if (typeof app !== "undefined") {
+                app.initialize();
+            }
+            
+        } catch (err) {
+            alert('error:' + err.message);
+        }
+      
+     
+    </script>
+    <!--<script type="text/javascript" src="PushNotification.js"></script>-->
+
+
+    </head>
+    <body  class="mpa_login" style="background-color: #AE0000;" >
+ 
+        
+        <script type="text/javascript">
+            var pushNotification;
+
+            // handle APNS notifications for iOS
+            function onNotificationAPN(e) {
+                if (e.alert) {
+                    $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
+                    navigator.notification.alert(e.alert);
+                }
+
+                if (e.sound) {
+                    var snd = new Media(e.sound);
+                    snd.play();
+                }
+
+                if (e.badge) {
+                    pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);
+                }
+            }
+
+            // handle GCM notifications for Android
+            function onNotificationGCM(e) {
+                $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+
+                switch (e.event) {
+                    case 'registered':
+                        if (e.regid.length > 0) {
+                            $("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+                            // Your GCM push server needs to know the regID before it can push to this device
+                            // here is where you might want to send it the regID for later use.
+                            alert("regID = " + e.regID);
+                        }
+                        break;
+
+                    case 'message':
+                        // if this flag is set, this notification happened while we were in the foreground.
+                        // you might want to play a sound to get the user's attention, throw up a dialog, etc.
+                        if (e.foreground) {
+                            $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
+
+                            // if the notification contains a soundname, play it.
+                            var my_media = new Media("/android_asset/www/" + e.soundname);
+                            my_media.play();
+                        }
+                        else {	// otherwise we were launched because the user touched a notification in the notification tray.
+                            if (e.coldstart)
+                                $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
+                            else
+                                $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+                        }
+
+                        $("#app-status-ul").append('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
+                        $("#app-status-ul").append('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
+                        break;
+
+                    case 'error':
+                        $("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
+                        break;
+
+                    default:
+                        $("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+                        break;
+                }
+            }
+
+            function tokenHandler(result) {
+                $("#app-status-ul").append('<li>token: ' + result + '</li>');
+                // Your iOS push server needs to know the token before it can push to this device
+                // here is where you might want to send it the token for later use.
+
+            }
+
+            function successHandler(result) {
+                $("#app-status-ul").append('<li>success:' + result + '</li>');
+            }
+
+            function errorHandler(error) {
+                $("#app-status-ul").append('<li>error:' + error + '</li>');
+            }
+
+            // Show a custom alert
+            //
+            function showAlert() {
+                navigator.notification.alert(
+                    'You are the winner!',  // message
+                    alertDismissed,
+                    'Game Over',            // title
+                    'Done'                  // buttonName
+                );
+                navigator.app.exitApp();
+            }
+
+            // alert dialog dismissed
+            function alertDismissed() {
+                // do something
+            }
+
+            // Beep three times
+            //
+            function playBeep() {
+                navigator.notification.beep(3);
+                navigator.app.exitApp();
+            }
+
+            // Vibrate for 2 seconds
+            //
+            function vibrate() {
+                navigator.notification.vibrate(2000);
+                navigator.app.exitApp();
+            }
+
+
+
+            // Called if something bad happens.
+            function onFail(message) {
+                alert('Failed because: ' + message);
+            }
+
+
+         </script>
+
+        
+       
+
+        <div class="logobox">
+            <img src="Content/images/logos/mpower_logo_start.png" class="logo_start" />
+            <h1>Mobile Pricing Application</h1>
+
+            <div id="startloadbox">
+                <h5 id="loadmsg">Testing Connection <span id="cspeed"></span></h5>
+                <div class="indicator_frame_start">
+                    <div class="indicator" id="i_connection"></div>
+                </div>
+             
+            </div>
+
+
+        </div>
+
+
+        <div class="companybox">
+            <img src="Content/images/logos/mohawk_company_logo.png" class="company_logo" />
+        </div>
+
+
+</body>
+  
+</html>
