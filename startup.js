@@ -23,9 +23,9 @@ $(document).ready(function () {
         if (exists) {
 
             setTimeout(clearInterval(myInterval),1000);
-            window.location.href = "http://mobilepricingdev.mohawkind.com";
-            // var ref = window.open('http://mobilepricingdev.mohawkind.com', '_self', 'toolbar=no,location=no');
-            //window.plugins.ChildBrowser.showWebPage('http://mobilepricingdev.mohawkind.com/Home/Login',
+            window.location.href = "http://mobilepricingqa.mohawkind.com";
+            // var ref = window.open('http://mobilepricingqa.mohawkind.com', '_self', 'toolbar=no,location=no');
+            //window.plugins.ChildBrowser.showWebPage('http://mobilepricingqa.mohawkind.com/Home/Login',
             //                        {
             //                            showLocationBar: false,
             //                            showNavigationBar: false,
@@ -71,7 +71,7 @@ $(document).ready(function () {
             if (NetworkUpCounter > 1) {
                 $('#loadmsg').html('Network Ready.');
                // clearInterval(myInterval);
-                urlExists('http://mobilepricingdev.mohawkind.com');
+                urlExists('http://mobilepricingqa.mohawkind.com');
                
             }
         }
