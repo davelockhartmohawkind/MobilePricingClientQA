@@ -24,6 +24,7 @@ $(document).ready(function () {
 
             setTimeout(clearInterval(myInterval),1000);
             window.location.href = "http://mobilepricingqa.mohawkind.com";
+
             // var ref = window.open('http://mobilepricingqa.mohawkind.com', '_self', 'toolbar=no,location=no');
             //window.plugins.ChildBrowser.showWebPage('http://mobilepricingqa.mohawkind.com/Home/Login',
             //                        {
