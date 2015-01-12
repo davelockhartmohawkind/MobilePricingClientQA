@@ -29,7 +29,8 @@
 	================================================== -->
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
     <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
-    <!--<script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
+    <script type="text/javascript" charset="utf-8" src="email_composer.js"></script>
    <!-- <script type="text/javascript" charset="utf-8" src="inappbrowser"></script>-->
     <script type="text/javascript" charset="utf-8" src="startup.js"></script>
     <script type="text/javascript">
@@ -40,6 +41,8 @@
                 alert("no navigator");
                 
             }
+           
+
             if (typeof app !== "undefined") {
                 app.initialize();
             }
@@ -193,10 +196,19 @@
              
             </div>
 
-
+            
         </div>
-
-
+         <div class="cntrl_shim"></div>
+          <div style=" display:block;
+  width:100%;
+  height:auto;
+  position:absolute;
+  bottom:36%;
+  left:0;
+  text-align:center; " >
+                    <a href="javascript:window.location.href='index.html';" style="display:block" class="btn_menu"  id="try_again">Try Again</a>
+          </div>
+         <div class="cntrl_shim"></div>
         <div class="companybox">
             <img src="Content/images/logos/mohawk_company_logo.png" class="company_logo" />
         </div>
