@@ -21,14 +21,27 @@
     <preference name="MySetting" value="true" />
     <plugins>
       <!--<plugin name="Notification" value="CDVNotification" />-->
-      <!--<plugin name="notification" value="org.apache.cordova.dialogs.Notification"/>-->
+      <!--<plugin name="notification" value="org.apache.cordova.dialogs.Notification"/>
+        <plugin name="device" value="org.apache.cordova.device" />
+      <plugin name="app" value="org.apache.cordova.App"/>
+      <plugin name="Capture" value="org.apache.cordova.Capture"/>
+      <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager"/>-->
        <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
         </feature>
-       <plugin name="device" value="org.apache.cordova.device" />
-      <plugin name="app" value="org.apache.cordova.App"/>
-      <plugin name="Capture" value="org.apache.cordova.Capture"/>
-      <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager"/>
+            <feature name="Device">
+           <param name="ios-package" value="CDVDevice" />
+           <param name="onload" value="true" />
+        </feature>
+        <feature name="app">
+           <param name="ios-package" value="org.apache.cordova.App" />
+        </feature>
+       <feature name="Capture">
+           <param name="ios-package" value="org.apache.cordova.Capture" />
+        </feature>
+        <feature name="NetworkStatus">
+           <param name="ios-package" value="org.apache.cordova.NetworkManager" />
+        </feature>
 
       <!--<plugin name="splash" value="org.apache.cordova.splashscreen" />-->
       <!--<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />-->
