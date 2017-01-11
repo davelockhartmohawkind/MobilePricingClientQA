@@ -21,7 +21,10 @@
     <preference name="MySetting" value="true" />
     <plugins>
       <!--<plugin name="Notification" value="CDVNotification" />-->
-      <plugin name="notification" value="org.apache.cordova.dialogs.Notification"/>
+      <!--<plugin name="notification" value="org.apache.cordova.dialogs.Notification"/>-->
+       <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+        </feature>
        <plugin name="device" value="org.apache.cordova.device" />
       <plugin name="app" value="org.apache.cordova.App"/>
       <plugin name="Capture" value="org.apache.cordova.Capture"/>
