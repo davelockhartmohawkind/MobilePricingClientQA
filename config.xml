@@ -105,7 +105,7 @@
     -->
 
   <gap:plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
-  <gap:plugin name="com.phonegap.plugins.childbrowser" version="5.0.0" />
+  <!--<gap:plugin name="com.phonegap.plugins.childbrowser" version="5.0.0" />-->
   <gap:plugin name="org.apache.cordova.inappbrowser" version="0.1.0"/>
   <gap:plugin name="de.appplant.cordova.plugin.email-composer" />
 
