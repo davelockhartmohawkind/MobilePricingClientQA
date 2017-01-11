@@ -109,7 +109,11 @@
   <gap:plugin name="org.apache.cordova.inappbrowser" version="0.1.0"/>
   <gap:plugin name="de.appplant.cordova.plugin.email-composer" />-->
   <gap:plugin name="cordova-plugin-email-composer" spec="0.8.3" source="npm"/>
-  <gap:plugin name="phonegap-plugin-push" spec="1.8.1" source="npm"/>
+  <gap:plugin name="phonegap-plugin-push" spec="1.8.1" source="npm">
+          <params>
+            <param name="SENDER_ID" value="987654321" />
+          </params>
+   </gap:plugin>
 
   <!-- Define app icon for each platform. -->
     <icon src="Content/images/icons/Mobile-PricingQA-114x114.png" />
