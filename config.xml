@@ -142,7 +142,7 @@
     <icon src="Content/images/icons/Mobile-PricingQA-114x114.png"            gap:platform="ios"        width="57" height="57" />
     <icon src="Content/images/icons/Mobile-PricingQA-114x114.png"            gap:platform="ios"        width="72" height="72" />
     <icon src="Content/images/icons/Mobile-PricingQA-114x114.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="Content/images/icons/Mobile-PricingQA-114x114.png"         gap:platform="ios"        width="525" height="525" />
+    <!--<icon src="Content/images/icons/Mobile-PricingQA-114x114.png"         gap:platform="ios"        width="525" height="525" />-->
     <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
