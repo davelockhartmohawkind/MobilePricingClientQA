@@ -158,6 +158,8 @@
     <gap:splash src="Content/images/splash/ios/splash640x960.png" gap:platform="ios"     width="640" height="960" />
     <gap:splash src="Content/images/splash/ios/splash768x1024.png"      gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="Content/images/splash/ios/splash1024x768.png"     gap:platform="ios"     width="1024" height="768" />
+    <gap:splash src="Content/images/splash/ios/splash1536x2048.png"     gap:platform="ios"     width="1536" height="2048" />
+    <gap:splash src="Content/images/splash/ios/splash2048x1536.png"     gap:platform="ios"     width="2048" height="1536" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
 
     <!--
