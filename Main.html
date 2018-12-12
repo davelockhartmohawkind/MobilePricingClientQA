@@ -1,103 +1,190 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" manifest="http://mobilepricingqa.mohawkind.com/Content/appcache.manifest" > <!--<![endif]-->
-
- 
-    <head>
-		<!--=================== Basic Page Needs =============================== -->
-		<meta charset="utf-8">
-		<title>Mobile Pricing</title>
-		<meta name="keywords" content="">
-		<meta name="description" content="">
-		<meta name="author" content="w1s0">
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-
-		<!-- ====================== Mobile Specific Metas ============================ -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" >
-
-		<!-- =================== PhoneGap Plugin JS =============================== -->
-		<script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
-		<!--<script type="text/javascript" charset="utf-8" src="http://mobilepricingqa.mohawkind.com/Content/library/jquery.min.js"></script>-->
-		<script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
-		<script type="text/javascript" charset="utf-8" src="email_composer.js"></script>
-		
-		
-		<!-- ================== Favicon ================================ -->
-		 
-		<link href="~/Content/images/icons/favicon.ico" rel="shortcut icon" >
-		<link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="57x57">
-		<link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-		<link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" >
-		<link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed">
-		<!-- <link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/startup.png" rel="apple-touch-startup-image">-->
-		<link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/display-thumb.jpg" rel="image_src">
-		<link href="http://mobilepricingqa.mohawkind.com/favicon.ico" rel="shortcut icon" type="image/x-icon" >
-		 
-
-	 
-		<!-- =================== CSS =============================== -->
-		<!--
-		<link rel="stylesheet" href="http://mobilepricingqa.mohawkind.com/Content/css/skeleton_mod.css">
-		<link rel="stylesheet" href="http://mobilepricingqa.mohawkind.com/Content/css/styles.css">
-		<link rel="stylesheet" href="http://mobilepricingqa.mohawkind.com/Content/font-awesome-4.1.0/css/font-awesome.min.css" >-->
-		<!--<link rel="stylesheet" href="http://mobilepricingqa.mohawkind.com/Content/css/tabs.css">-->
-
-		<!--[if lt IE 8]>
-		<link href="~/Content/css/iefix.css" rel="stylesheet" type="text/css" />
-		<![endif]-->
-		
-		<!-- MM new css include -->
-		<link href="http://mobilepricingqa.mohawkind.com/Content/styles/bootstrap.min.css" rel="stylesheet" />
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet"/>
-		<link href="http://mobilepricingqa.mohawkind.com/Content/css/skeleton_mod.css"rel="stylesheet" >
-		<link href="http://mobilepricingqa.mohawkind.com/Content/font-awesome-4.1.0/css/font-awesome.min.css"rel="stylesheet" >
-		<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css" rel="stylesheet" type="text/css" >
-		<link href="http://mobilepricingqa.mohawkind.com/Content/styles/new-custom-style.css" rel="stylesheet" />
-		<link href="http://mobilepricingqa.mohawkind.com/Content/styles/style3.css" rel="stylesheet" />
-		<!--End MM new css include -->
-		
-		<!-- ====================== JS ============================ -->
-		<!--
-		<script src="http://mobilepricingqa.mohawkind.com/Content/library/jquery.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.ui.touch-punch.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/zebra_datepicker.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.scrollTo.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.formatCurrency-1.4.0.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.loadTemplate-1.4.4.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/date.js"></script>
-		-->
-		
-		<!-- MM new JS include -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/library/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.ui.touch-punch.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/zebra_datepicker.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.scrollTo.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.formatCurrency-1.4.0.min.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.loadTemplate-1.4.4.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/plugins/date.js"></script>
-		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js "type="text/javascript" charset="utf8" ></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/scripts/functions.js"></script>
-		<script src="http://mobilepricingqa.mohawkind.com/Content/scripts/functions_ope.js"></script>
-		<!--End  MM new JS include -->
-    </head>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" manifest="http://mobilepricingqa.mohawkind.com/Content/appcache.manifest">
+ <!--<![endif]-->
 
 
-     <body id="theBody" class="mpa_login" >
+<head>
+    <!--=================== Basic Page Needs =============================== -->
+    <meta charset="utf-8">
+    <title>Mobile Pricing</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="w1s0">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- ====================== Mobile Specific Metas ============================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+    <!-- =================== PhoneGap Plugin JS =============================== -->
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="https://protect-us.mimecast.com/s/RrlNCqxM7gc0QxknhXYjc-?domain=mobilepricingqa.mohawkind.com"></script>-->
+    <script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
+    <script type="text/javascript" charset="utf-8" src="email_composer.js"></script>
+
+
+    <!-- ================== Favicon ================================ -->
+
+    <link href="~/Content/images/icons/favicon.ico" rel="shortcut icon">
+    <link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed">
+    <!-- <link href="https://protect-us.mimecast.com/s/R06ICrkM8jfVqzn7U4g5LD?domain=mobilepricingqa.mohawkind.com" rel="apple-touch-startup-image">-->
+    <link href="http://mobilepricingqa.mohawkind.com/Content/images/icons/display-thumb.jpg" rel="image_src">
+    <link href="http://mobilepricingqa.mohawkind.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+
+
+    <!-- =================== CSS =============================== -->
+    <!--
+    <link rel="stylesheet" href="https://protect-us.mimecast.com/s/rreqCv29lnhN9PLqIAhBvs?domain=mobilepricingqa.mohawkind.com">
+    <link rel="stylesheet" href="https://protect-us.mimecast.com/s/z7mmCwpRVoc8j4Vkt1sfwW?domain=mobilepricingqa.mohawkind.com">
+    <link rel="stylesheet" href="https://protect-us.mimecast.com/s/QG1HCxk7npfMlgRDfWFRLP?domain=mobilepricingqa.mohawkind.com" >-->
+    <!--<link rel="stylesheet" href="https://protect-us.mimecast.com/s/WWDfCyPJoqTX1Q2KsPM--3?domain=mobilepricingqa.mohawkind.com">-->
+    <!--[if lt IE 8]>
+    <link href="~/Content/css/iefix.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- MM new css include -->
+    <link href="http://mobilepricingqa.mohawkind.com/Content/styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="http://mobilepricingqa.mohawkind.com/Content/css/skeleton_mod.css" rel="stylesheet">
+    <link href="http://mobilepricingqa.mohawkind.com/Content/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+    <link href="http://mobilepricingqa.mohawkind.com/Content/styles/new-custom-style.css" rel="stylesheet" />
+    <link href="http://mobilepricingqa.mohawkind.com/Content/styles/style3.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!--End MM new css include -->
+    <!-- ====================== JS ============================ -->
+    <!--
+    <script src="https://protect-us.mimecast.com/s/RrlNCqxM7gc0QxknhXYjc-?domain=mobilepricingqa.mohawkind.com"></script>
+    <script src="https://protect-us.mimecast.com/s/D2uECzpxvrcg1ywEfM1mnv?domain=mobilepricingqa.mohawkind.com"></script>
+    <script src="https://protect-us.mimecast.com/s/Vrz8CAD9NRh6QPlBcBhl9i?domain=mobilepricingqa.mohawkind.com"></script>
+    <script src="https://protect-us.mimecast.com/s/iAR2CBBRNVI6GkR0cQaE2O?domain=mobilepricingqa.mohawkind.com"></script>
+    <script src="https://protect-us.mimecast.com/s/B-u8CDkJ1Xfv9WJwHvmwuF?domain=mobilepricingqa.mohawkind.com"></script>
+    <script src="https://protect-us.mimecast.com/s/4_KxCER68YT97z0OSkfaMi?domain=mobilepricingqa.mohawkind.com"></script>
+    <script src="https://protect-us.mimecast.com/s/z--zCG6Qv1hY7POEHPLvGG?domain=mobilepricingqa.mohawkind.com"></script>
+    <script src="https://protect-us.mimecast.com/s/wyk9CJ67y4hrJ2AlTYJ9Js?domain=mobilepricingqa.mohawkind.com"></script>
+    -->
+    <!-- MM new JS include -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/library/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.ui.touch-punch.min.js"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/plugins/zebra_datepicker.js"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.scrollTo.min.js"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.formatCurrency-1.4.0.min.js"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/plugins/jquery.loadTemplate-1.4.4.js"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/plugins/date.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js " type="text/javascript" charset="utf8"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/scripts/functions.js"></script>
+    <script src="http://mobilepricingqa.mohawkind.com/Content/scripts/functions_ope.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--End  MM new JS include -->
+</head>
+
+
+<body class="mpa_login">
+    <div class="wrapper">
+        <div id="theHeader">
+            <nav id="sidebar">
+                <div id="dismiss" class="dismiss hide">
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="sidebar-header">
+                    <h6 class="txt_btn" id="BackBtn">
+                        <a href="#" class="sidebar-anchor btn btn-danger" id="menuBackButton">
+                            <i class="fa fa-angle-left"></i>&nbsp; Back
+                        </a>
+                    </h6>
+                </div>
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <h6 class="txt_btn" id="homeBtn">
+                            <a href="javascript:gotoBranchSelect();" class="sidebar-anchor">
+                                Home
+                            </a>
+                        </h6>
+                    </li>
+                    <li>
+                        <h6 class="txt_btn" id="logging_status"></h6>
+                    </li>
+                    <li>
+                        <h6 class="txt_btn" id="accountsBtn" style="display: none">
+                            <a href="javascript:goBackAccountList();" class="sidebar-anchor">Accounts</a>
+                        </h6>
+                    </li>
+                    <li>
+                        <h6 class="txt_btn" id="inboxBtn"></h6>
+                    </li>
+                    <li>
+                        <h6 class="txt_btn" id="productsBtn" style="display: none">
+                            <a href="javascript:goBackAddProducts();" class="sidebar-anchor">Products</a>
+                        </h6>
+                    </li>
+                </ul>
+                <ul class="list-unstyled CTAs">
+                    <li>
+                        <h6 class="txt_btn" id="logoutBtn">
+                            <a href="javascript:onLogout();" class="sidebar-anchor">Logout</a>
+                        </h6>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+        <div id="">
+            <nav id="topNav" class="topNav">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                            <a id="sidebarCollapse">
+                                <i style="color: #ffffff;font-size: 40px;margin-left:15px;" class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-5 col-xs-10" style="text-align:center;">
+                            <img src="http://mobilepricingqa.mohawkind.com/Content/images/logos/new_logo.png" class="header_logo img-responsive" />
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 header-right">
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="fa fa-gear"></span>
+                                        <strong class="welcomeUserNameAs"></strong>
+                                        <span class="fa fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="m_console_data">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div id="theBody"></div>
+        </div>
+    </div>
+    <div id="data_loading" class="overlay">
+        <div>
+            <i class="fa fa-refresh fa-spin fa-3x"></i><i class="fa  fa-3x">Working...</i>
+        </div>
+    </div>
     <script>
-        var G_AbsoluteUri = 'http://mobilepricingqa.mohawkind.com/';
+        var G_AbsoluteUri = 'http://mobilepricingqa.mohawkind.com';
         var G_Home = 'Main.html';
         var G_appVersion = "";
 
@@ -141,18 +228,18 @@
 
         }
 
-        var doOnReady = function() {
+        var doOnReady = function () {
 
             $.post(
 
-                   G_AbsoluteUri  + 'Home/_login',
+                   G_AbsoluteUri + 'Home/_login',
 
                         { whatversion: '' },
                         handleLoginPage
                     );
         }
 
-        var handleLoginPage = function(content) {
+        var handleLoginPage = function (content) {
             if (content != undefined && content != null && content != "") {
                 $("#theBody").removeClass('mpa_app');
                 $("#theBody").addClass('mpa_login');
@@ -163,17 +250,65 @@
 
         }
 
+
+        function showFilterDiv() {
+            $('.filterRow').show();
+            $('.SearchRow').hide();
+        }
+
+        function showSearchDiv() {
+            $('.filterRow').hide();
+            $('.SearchRow').show();
+        }
+
+        window.onclick = function (event) {
+            if ($('.dropdown.keep-open').has(event.target).length == 0 //checks if descendants of $box was clicked
+                &&
+                !$('.dropdown.keep-open').is(event.target) //checks if the $box itself was clicked
+                &&
+                $(event.target).parents("li").length == 0) {
+                //if ($(event.target).parents(".dropdown.keep-open").length === 0) {
+                $('.dropdown.keep-open').removeClass("open");
+                $('.dropdown-toggle').attr("aria-expanded", false);
+            }
+        }
+
         $(document).ready(function () {
-           
+
             doOnReady();
+
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+            $('#dismiss, .overlay, #sidebar a').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+                $('body').removeClass('overFlow');
+                $("#dismiss").addClass("hide");
+            });
+            var $menu = $('#sidebar');
+            $(document).mouseup(function (e) {
+                if (!$menu.is(e.target) && $menu.has(e.target).length === 0 && $('#sidebar').hasClass('active')) {
+                    $('#sidebar').removeClass('active');
+                    $('.overlay').removeClass('active');
+                    $('body').removeClass('overFlow');
+                    $("#dismiss").addClass("hide");
+                }
+            });
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('body').addClass('overFlow');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                $("#dismiss").removeClass("hide");
+            });
         });
 
     </script>
-      
+
 </body>
 
 
-      <script src="http://mobilepricingqa.mohawkind.com/Content/scripts/functions.js" ></script>
+<script src="http://mobilepricingqa.mohawkind.com/Content/scripts/functions.js"></script>
 </html>
-
-
