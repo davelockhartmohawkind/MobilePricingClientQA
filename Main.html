@@ -6,12 +6,12 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en" manifest="http://mobilepricingqa.mohawkind.com/Content/appcache.manifest">
  <!--<![endif]-->
-
+<!--testing this page comment-->
 
 <head>
     <!--=================== Basic Page Needs =============================== -->
     <meta charset="utf-8">
-    <title>Mobile Pricing</title>
+    <title>Mobile Pricing phonegap</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="w1s0">
@@ -242,9 +242,10 @@
         var handleLoginPage = function (content) {
             if (content != undefined && content != null && content != "") {
                 $("#theBody").removeClass('mpa_app');
-                $("#theBody").addClass('mpa_login');
-                //$("#theBody").append(content);
-                $("#theBody").html(content);
+				$("#theBody").addClass('mpa_login');
+				//$("#theBody").append(content);
+				$("#theBody").html(content);
+                
                 doOnLoginReady();
             }
 
